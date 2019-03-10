@@ -85,7 +85,7 @@ overflow: hidden;
 
 
        <nav class="topnav  fixed-top" id="myTopnav">
-  <a href="#page-top" class="active" style="padding-right: 40px "> <h6 style="font-family: 'Overpass', sans-serif; font-weight: bold; line-height: normal; font-size: 20px;letter-spacing: 5px; padding-left: 10px;">THRIFTER </h6></a>
+  <a href="start.html" class="active" style="padding-right: 40px "> <h6 style="font-family: 'Overpass', sans-serif; font-weight: bold; line-height: normal; font-size: 20px;letter-spacing: 5px; padding-left: 10px;">Thrifter </h6></a>
 
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
@@ -97,12 +97,12 @@ overflow: hidden;
 
 
 
-<div class="container1" style= "padding-top: 70px; padding-left: 32px; font-size: 12px; font-family: 'Overpass', sans-serif;">
+<div class="container1" style= "padding-top: 85px; padding-left: 90px; font-size: 12px; font-family: 'Overpass', sans-serif;">
 
-  <input type="file" name="file" id="file" class="inputfile" onchange="readURL(this);" />
+  <input type="file" name="file" id="file" class="inputfile" onchange="readURL(this);"/>
   <label for="file"> +  Upload an Image </label>
-  <div class=img-upload style = "padding-top: 80px; padding-right:20px; padding-left: 50px;">
-<img id="blah" src="http://placehold.it/180" alt="your image" style= "max-width:200px; max-height: 200px;""/>
+  <div class=img-upload style = "padding-top: 80px; padding-right:40px; padding-left: 40px;">
+<img id="blah" src="placeholder.png" alt="your image" style= "max-width:200px; max-height: 200px;"/>
 </div>
 
 </div>
@@ -136,12 +136,22 @@ function readURL(input) {
 ;
   </script>
 
-  <div>
-      <a href="#" onclick="SubmitForm();">Click</a>
+  <div class="container1" style= "padding-top: 50px; padding-left: 115px; font-size: 12px; font-family: 'Overpass', sans-serif;">
+    <form method="post" enctype="multipart/form-data" action="http://localhost:3000/api/thrifter/searchImg">
+        <a href="#"  style ="  background-color: #58D68D; color: white; font-size: 1.25em; font-weight: 700;  display: inline-block;  border: 2px solid #C4C4C4; padding: 10px 10px 10px 10px; border-radius: 20px; font-size: 12px; letter-spacing: 2px;"onclick="SubmitForm();">Submit</a>
+      </form>
   </div>
 
-<hr style= "position: absolute; width: 605px; height: 0px; left: 70px; top: 350px; border: 1px solid #C4C4C4;filter: blur(1px);transform: rotate(90.09deg);"></hr>
-<hr style="position: absolute; width: 875px; height: 0px; left: 377px; top: 120px;border: 1px solid #C4C4C4;"></hr>
+<div class=container0>
+
+
+</div>
+
+
+
+<hr style= "position: absolute; width: 605px; height: 0px; left: 70px; top: 350px; border: 1px solid #C4C4C4;filter: blur(0px);transform: rotate(90.09deg);"></hr>
+<hr style="position: absolute; width: 875px; height: 0px; left: 376px; top: 235px;border: 1px solid #C4C4C4;"></hr>
+<hr style="position: absolute; width: 875px; height: 0px; left: 376px; top: 435px;border: 1px solid #C4C4C4;"></hr>
 
 
 
