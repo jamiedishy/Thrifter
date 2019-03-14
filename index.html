@@ -1,164 +1,324 @@
 <!DOCTYPE html>
 <html>
 <head>
-      <link rel="icon" href="SM.png">
-
+  
 	<title>Thrifter</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Overpass" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  
+  
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <style>
+    /* Add a black background color to the top navigation */
+    body {
+      background: #C9D6FF;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
 
+    .img-preview {
+      margin-top: 10px;
+    }
+    
+    .dataBorderFirst {
+      margin-top: 100px;
+    }
 
-<link rel="stylesheet" type="text/css" href="index.css">
-<style>
-        /* Add a black background color to the top navigation */
-.topnav {
-background-color:	#58D68D;
-overflow: hidden;
-}
+    img {
+      border-radius: 5%;
+    }
 
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  display: block;
-  color: #FFFFFF;
-  text-align: center;
-  padding: 10px 16px 1px;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: 'Karla', sans-serif;
-}
+    input:hover {background-color: #3e8e41}
 
-/* Change the color of links on hover */
+    input:active {
+      background-color: #3e8e41;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
 
-
-/* Add an active class to highlight the current page */
-
-
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-  display: none;
-}
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
-
-
-</style>
-
-<script>
+    .topnav {
+      background-color:	#58D68D;
+      overflow: hidden;
+    }
+    
+    /* Style the links inside the navigation bar */
+    .topnav a {
+      float: left;
+      display: block;
+      color: #FFFFFF;
+      text-align: center;
+      padding: 10px 16px 1px;
+      text-decoration: none;
+      font-size: 14px;
+      font-family: 'Karla', sans-serif;
+    }
+    
+    /* Change the color of links on hover */
+    
+    
+    /* Add an active class to highlight the current page */
+    
+    
+    /* Hide the link that should open and close the topnav on small screens */
+    .topnav .icon {
+      display: none;
+    }
+    /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+    @media screen and (max-width: 600px) {
+      .topnav a:not(:first-child) {display: none;}
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+    }
+    
+    /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+    @media screen and (max-width: 600px) {
+      .topnav.responsive {position: relative;}
+      .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+    }
+    
+    
+  </style>
+  
+  <script>
     function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
-
-
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+  
 
 </head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <body>
+  
+  
+  <nav class="topnav  fixed-top" id="myTopnav">
+    <a href="start.html" class="active" style="padding-right: 40px "> <h6 style="font-family: 'Overpass', sans-serif; font-weight: bold; line-height: normal; font-size: 20px;letter-spacing: 5px; padding-left: 10px;">Thrifter </h6></a>
+    
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+      
+    </a>
+  </nav>
+  
+        
+        <br>
 
-
-       <nav class="topnav  fixed-top" id="myTopnav">
-  <a href="start.html" class="active" style="padding-right: 40px "> <h6 style="font-family: 'Overpass', sans-serif; font-weight: bold; line-height: normal; font-size: 20px;letter-spacing: 5px; padding-left: 10px;">Thrifter </h6></a>
-
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-
-  </a>
-</nav>
-
-
-
-
-
-<div class="container1" style= "padding-top: 85px; padding-left: 90px; font-size: 12px; font-family: 'Overpass', sans-serif;">
-
-  <input type="file" name="file" id="file" class="inputfile" onchange="readURL(this);"/>
-  <label for="file"> +  Upload an Image </label>
-  <div class=img-upload style = "padding-top: 80px; padding-right:40px; padding-left: 40px;">
-<img id="blah" src="placeholder.png" alt="your image" style= "max-width:200px; max-height: 200px;"/>
-</div>
-
-</div>
-
-<script>
-function readURL(input) {
-      if (input.files && input.files[0]) {
-          var reader = new FileReader();
-
-          reader.onload = function (e) {
-              $('#blah')
-                  .attr('src', e.target.result);
-          };
-
-          reader.readAsDataURL(input.files[0]);
-      }
-  }
-  </script>
+        <div class="p-1">
+          <div class="row">
+            <div class="col-sm-3">
 
 
 
-  <script type="text/javascript">
-    $('#myForm')
-  .ajaxForm({
-      url : 'myscript.php', // or whatever
-      dataType : 'json',
-      success : function (response) {
-          alert("The server says: " + response);
-      }
-  })
-;
-  </script>
+              <div class="container1" style= "width: 50%; padding-top: 100px; padding-left: 100px; font-size: 12px; font-family: 'Overpass', sans-serif;">
+                <form id="myForm" name="myForm" method="post" enctype="multipart/form-data">
+                 
+                  <label for="file-upload" class="custom-file-upload" style= "white-space: nowrap; background-color: #58D68D; color: white; font-size: 1.25em; font-weight: 700;  display: inline-block;  border: 2px solid #C4C4C4; padding: 10px 10px 10px 10px; border-radius: 20px; font-size: 12px; letter-spacing: 2px;">
+                      <i class="fa fa-cloud-upload"></i> Upload Image
+                  </label>
+                    <input id="file-upload" name='files' onchange="readURL(this);" type="file" style="display:none;">
+                  <br>
+                  <input #submit style="background-color: #58D68D; color: white; font-size: 1.25em; font-weight: 700;  display: inline-block;  border: 2px solid #C4C4C4; padding: 10px 10px 10px 10px; border-radius: 20px; font-size: 12px; letter-spacing: 2px;" type="submit" value="Search Image" name="submit" >
+                </form>
 
-  <div class="container1" style= "padding-top: 50px; padding-left: 115px; font-size: 12px; font-family: 'Overpass', sans-serif;">
-    <form method="post" enctype="multipart/form-data" action="http://localhost:3000/api/thrifter/searchImg">
-        <a href="#"  style ="  background-color: #58D68D; color: white; font-size: 1.25em; font-weight: 700;  display: inline-block;  border: 2px solid #C4C4C4; padding: 10px 10px 10px 10px; border-radius: 20px; font-size: 12px; letter-spacing: 2px;"onclick="SubmitForm();">Submit</a>
-      </form>
-  </div>
+                <div class="img-preview" > 
+                  <img id="blah" src="placeholder.png" alt="your image" style= "max-width:200px; max-height: 200px;"/>
+                </div>
 
-<div class=container0>
+              </div>
+            </div>
+            <div class="col-sm-7">
 
+              <div class="row">
+                  <div class="dataBorderFirst" style="width: 95%;">
+                      <div id="data1"></div>
+                  </div>
+              </div>
+              <br>
+              <div class="row">
+                  <div class="" style="width: 95%;">
+                      <div id="data2"></div>
+                  </div>
+              </div>
 
-</div>
+            </div>
+          </div>
+        </div>
 
+        <script type="text/javascript">
 
+          function readURL(input) { // reference: https://codepen.io/mobifreaks/pen/LIbca
+                  if (input.files && input.files[0]) {
+                      var reader = new FileReader();
 
-<hr style= "position: absolute; width: 605px; height: 0px; left: 70px; top: 350px; border: 1px solid #C4C4C4;filter: blur(0px);transform: rotate(90.09deg);"></hr>
-<hr style="position: absolute; width: 875px; height: 0px; left: 376px; top: 235px;border: 1px solid #C4C4C4;"></hr>
-<hr style="position: absolute; width: 875px; height: 0px; left: 376px; top: 435px;border: 1px solid #C4C4C4;"></hr>
+                      reader.onload = function (e) {
+                          $('#blah')
+                              .attr('src', e.target.result);
+                      };
 
+                      reader.readAsDataURL(input.files[0]);
+                  }
+            }
 
+          // file upload onchange take from: https://stackoverflow.com/questions/41542845/how-to-display-file-name-for-custom-styled-input-file-using-jquery
+          $('#file-upload').change(function() {
+            var i = $(this).prev('label').clone();
+            var file = $('#file-upload')[0].files[0].name;
+            $(this).prev('label').text(file);
+          });
 
+          function showname () {
+            var name = document.getElementById('fileInput'); 
+            alert('Selected file: ' + name.files.item(0).name);
+            alert('Selected file: ' + name.files.item(0).size);
+            alert('Selected file: ' + name.files.item(0).type);
+          }
 
+          function parseTable(obj) {
 
+            console.log(JSON.parse(obj));
+            newObj = JSON.parse(obj);
+            
+            let dataContent1 = '';
+            let dataContent2 = '';
 
+            if (newObj.length > 1) {
+              // data1
+              // $("#data1").replaceWith('');
+              
+              //console.log(newObj[0].Description);
+              //console.log(newObj[0].base64);
 
+              dataContent1 += "<div class='row'>";
+              dataContent1 += "<div class='col-sm-5'>";
+              dataContent1 += "<figure>";
+              dataContent1 += "<img src='data:image/png;base64," + newObj[0].base64 + "'" + " style= 'max-width:300px; max-height: 300px;'/>";
+              dataContent1 += "<figcaption><b>Description: </b>" + newObj[0].Description + "<br> <b>Store: </b>" + newObj[0].Store + "</figcaption>" 
+              dataContent1 += "</figure></div>"
 
-</body>
-</html>
+              dataContent1 += "<div class='display-4 col-sm-5 text-center' style='width: 100%; margin-top: auto; margin-bottom: auto;'> <b>Match:</b> " + newObj[0].percentFloorMatch + "%</div>";
+
+              dataContent1 += "</div><br>";
+
+              $("#data1").html(dataContent1);
+              $("#data1").css({
+                  "border-style": "solid",
+                  "border-color": "#9b870c",
+                  "border-radius": "2%",
+                  "margin-left": "50px",
+                  "margin-bottom": "25px;"
+              });
+
+              //console.log(newObj[0].Description);
+              //console.log(newObj[0].base64);
+
+              dataContent2 += "<div class='row'>";
+              dataContent2 += "<div class='col-sm-5'>";
+              dataContent2 += "<figure>";
+              dataContent2 += "<img src='data:image/png;base64," + newObj[1].base64 + "'" + " style= 'max-width:300px; max-height: 300px;'/>";
+              dataContent2 += "<figcaption><b>Description: </b>" + newObj[1].Description + "<br> <b>Store: </b>" + newObj[1].Store + "</figcaption>" 
+              dataContent2 += "</figure></div>"
+
+              dataContent2 += "<div class='display-4 col-sm-5 text-center' style='width: 100%; margin-top: auto; margin-bottom: auto;'> <b>Match:</b> " + newObj[1].percentFloorMatch + "%</div>";
+
+              dataContent2 += "</div><br>";
+
+              console.log(dataContent2);
+
+              $("#data2").html(dataContent2);
+              $("#data2").css({
+                  "border-style": "solid",
+                  "border-color": "#9b870c",
+                  "border-radius": "2%",
+                  "margin-left": "50px",
+                  "margin-bottom": "25px;"
+              });
+
+            } // else if (newObj.length > 0) { // technically will never have 0 or 1 matches, algorithm will always return 2 CLOSEST matches
+          //     // data1
+          //     // $("#data1").replaceWith('');
+
+          //     console.log(newObj[0].Description);
+          //     console.log(newObj[0].base64);
+              
+          //     dataContent1 += "<h3>Description: </h3>";
+          //     dataContent1 +=  "<div>" + newObj[0].Description + "</div>";
+          //     dataContent1 += "<h3>Store: </h3>";
+          //     dataContent1 +=  "<div>" + newObj[0].Store + "</div>";
+          //     dataContent1 += "<img src='data:image/png;base64," + newObj[0].base64 + "'" + " style= 'max-width:200px; max-height: 200px;'/>";
+          //     dataContent1 += "<br>";
+
+          //     $("#data1").html(dataContent1);
+          //     $("#data2").html('');
+          //   } else { 
+          //     $("#data1").html('');
+          //     $("#data2").html('');
+          //     $("#notFound").html("<div>No Matches Found!</div>");
+          //   }
+          // }
+          }
+
+          window.addEventListener("load", function () {
+            function sendData() {
+              var XHR = new XMLHttpRequest(); 
+              // XMLHttpRequest (XHR) is an API in the form of an object whose methods transfer data between a web browser and a web server. 
+
+              // Ajax request uses XHR request as core function to make the call. 
+              // You can say it is wrapper with added checking and functionality to provide cross-browser compatibility 
+              //and error correcting and checking mechanism.
+        
+              // Bind the FormData object and the form element
+              var FD = new FormData(form);
+        
+              // Define what happens on successful data submission
+              XHR.addEventListener("load", function(event) {
+                console.log(event.target.responseText);
+                parseTable(event.target.responseText);                
+              });
+        
+              // Define what happens in case of error
+              XHR.addEventListener("error", function(event) {
+                alert('Oops! Something went wrong.');
+                
+              });
+        
+              // Set up our request
+              XHR.open("POST", "http://localhost:3000/api/thrifter/searchImg");
+        
+              // The data sent is what the user provided in the form
+              XHR.send(FD);
+            }
+          
+            // Access the form element...
+            var form = document.getElementById("myForm");
+        
+            // ...and take over its submit event.
+            form.addEventListener("submit", function (event) {
+              event.preventDefault();
+        
+              sendData();
+            });
+          });     
+    </script>         
+        
+    </body>
+  </html>
+                        
