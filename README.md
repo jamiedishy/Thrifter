@@ -6,5 +6,9 @@ to buy and our application finds a quick match of cheap, recyclable options that
 
 # Demo Screenshots
 
+![Image description](./Screenshots/thrifter_landing.png)
+
+![Image description](./Screenshots/thrifter_query.png)
+
 
 
