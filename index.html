@@ -180,6 +180,13 @@
 
           // file upload onchange take from: https://stackoverflow.com/questions/41542845/how-to-display-file-name-for-custom-styled-input-file-using-jquery
           $('#file-upload').change(function() {
+            
+            $("#data1").html('');
+            $("#data2").html('');
+            
+            $("#data1").css({ "visibility" : "hidden"});
+            $("#data2").css({ "visibility" : "hidden"});
+
             var i = $(this).prev('label').clone();
             var file = $('#file-upload')[0].files[0].name;
             $(this).prev('label').text(file);
@@ -220,6 +227,7 @@
 
               $("#data1").html(dataContent1);
               $("#data1").css({
+                  "visibility" : "visible",
                   "border-style": "solid",
                   "border-color": "#9b870c",
                   "border-radius": "2%",
@@ -245,6 +253,7 @@
 
               $("#data2").html(dataContent2);
               $("#data2").css({
+                  "visibility" : "visible",
                   "border-style": "solid",
                   "border-color": "#9b870c",
                   "border-radius": "2%",
